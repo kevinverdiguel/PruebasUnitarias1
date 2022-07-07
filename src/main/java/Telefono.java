@@ -1,22 +1,18 @@
 import java.util.Scanner;
 
-public class Telefono {
+public class Telefono extends Clientes{
     long numTelefono;
     float saldoTelefono;
 
-    public Telefono(long num, float saldo){
-        numTelefono = num;
-        saldoTelefono = saldo;
+    
+    public Telefono(int idCliente, String nombre, String direccion, 
+            float saldoTotal, long numTelefono, float saldoTelefono){
+        
+        super(idCliente, nombre, direccion, saldoTotal);
+        this.numTelefono = numTelefono;
+        this.saldoTelefono = saldoTelefono;
     }
-
-
-    public void modificarNumero(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ingresar nuevo numero: \n");
-        numTelefono = sc.nextLong();
-        System.out.println("Nuevo telefono: " + numTelefono);
-    }
-
+    
 
     public long getNumTelefono() {
         return numTelefono;

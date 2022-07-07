@@ -4,7 +4,7 @@ public class Main {
         //Crear un cliente
         Clientes Juan = new Clientes(1,"Juan","Temixco",0);
         System.out.println(Juan.getIdCliente());
-        Juan.modificarDatos();
+        //Juan.modificarDatos();
     }
 
 

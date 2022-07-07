@@ -1,25 +1,30 @@
-public class Cable {
-    int idCable;
-    float saldoCable;
-
-    public Cable(int id, float saldo){
-        idCable = id;
-        saldoCable = saldo;
+public class Cable extends Clientes{
+    int numTelefono;
+    float saldoTelefono;
+    
+    public Cable(int idCliente, String nombre, String direccion, 
+            float saldoTotal, int numeroTelefono, float saldoTelefono){
+       
+        super(idCliente, nombre, direccion, saldoTotal);
+        this.numTelefono = numeroTelefono;
+        this.saldoTelefono = saldoTelefono;
     }
 
-    public int getIdCable() {
-        return idCable;
+    public int getNumTelefono() {
+        return numTelefono;
     }
 
-    public void setIdCable(int idCable) {
-        this.idCable = idCable;
+    public void setNumTelefono(int numTelefono) {
+        this.numTelefono = numTelefono;
     }
 
-    public float getSaldoCable() {
-        return saldoCable;
+    public float getSaldoTelefono() {
+        return saldoTelefono;
     }
 
-    public void setSaldoCable(float saldoCable) {
-        this.saldoCable = saldoCable;
+    public void setSaldoTelefono(float saldoTelefono) {
+        this.saldoTelefono = saldoTelefono;
     }
+    
+    
 }
