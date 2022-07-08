@@ -15,6 +15,7 @@ public class Main {
         Telefono serv3 = new Telefono(1,"Juan","San pedro",0, 0, 800.5f);
         Telefono serv4 = new Telefono(1,"Juan","San pedro",0, 81515451, 400.5f);
         Cable serv5 = new Cable(1,"Juan","San Pedro",0,0,200f);
+        Cable serv6 = new Cable(1,"Juan","San Pedro",200,50,40f);
 
         System.out.print("Selecciona un servicio\n"
                 + "1. Saldo con iva en internet\n"
@@ -42,7 +43,7 @@ public class Main {
                 System.out.println("Paquete "+serv2.paquetes());
                 
                 break;
-            case 3: System.out.println("hola");
+            case 3: System.out.println("Precio con el numero de canales: "+serv6.canales());
                 break;
             case 4:
                 System.out.print("Ingrese el telefono (inicie con +): ");
