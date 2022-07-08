@@ -30,7 +30,9 @@ public class Cable extends Clientes{
     }
     
     public void definicion(){
-        
+        Scanner sc = new Scanner(System.in);
+        int costoPorCanalHD = 5;
+        System.out.println("Ingresar datos que desea consumir este mes: ");
     }
 
     /*

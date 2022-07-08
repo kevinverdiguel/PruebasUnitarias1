@@ -36,7 +36,12 @@ public class Internet extends Clientes{
     }
     
     /*
-    public float pagarSaldoInternet(){
+    public float sumaConIva(float saldoInternet){
+        float conIva = (float)(saldoInternet * 0.16);
+        float sumaConIva
+
+    }
+    /*public float pagarSaldoInternet(){
         float saldoAPagar;
         Scanner sc = new Scanner(System.in);
         System.out.println("Usted debe $" + saldoInternet);
@@ -50,8 +55,8 @@ public class Internet extends Clientes{
             System.out.println("Cantidad de $" + saldoAPagar + " pagado.");
             return saldoAPagar;
         }
-    }
-    */
+    }*/
+
 
     public int getIdInternet() {
         return idInternet;
