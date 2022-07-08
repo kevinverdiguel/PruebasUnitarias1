@@ -7,12 +7,35 @@ public class Internet extends Clientes{
     float saldoInternet;
 
     public Internet(int idCliente, String nombre, String direccion,
-                    float saldoTotal, int id, float saldo) {
+                    float saldoTotal, int idInternet, float saldoInternet) {
         super(idCliente, nombre, direccion, saldoTotal);
-        idInternet = id;
-        saldoInternet = saldo;
+        this.idInternet = idInternet;
+        this.saldoInternet = saldoInternet;
     }
 
+    public float sumaConIva(){
+        float conIva = (float) (saldoInternet*0.16);
+        float sumaConIva = saldoInternet + conIva;
+        
+        return sumaConIva;
+    }
+    
+    public String paquetes(){
+        String paquete = "";
+        
+        switch(idInternet){
+            case 1: paquete = "Paquete basico";
+            break; 
+            case 2: paquete = "Paquete premium";
+            break;
+            case 3: paquete = "Paquete ultra";
+            break; 
+        }
+        
+        return paquete;
+    }
+    
+    /*
     public float pagarSaldoInternet(){
         float saldoAPagar;
         Scanner sc = new Scanner(System.in);
@@ -28,6 +51,7 @@ public class Internet extends Clientes{
             return saldoAPagar;
         }
     }
+    */
 
     public int getIdInternet() {
         return idInternet;

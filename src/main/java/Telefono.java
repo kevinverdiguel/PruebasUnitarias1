@@ -13,6 +13,15 @@ public class Telefono extends Clientes{
         this.saldoTelefono = saldoTelefono;
     }
     
+    // lada
+    public void numero(){
+        String telefono = String.valueOf(numTelefono);
+        
+        if(telefono.contains("+81")){
+            System.out.println("Es de monterrey");
+        }
+    }
+    
 
     public long getNumTelefono() {
         return numTelefono;

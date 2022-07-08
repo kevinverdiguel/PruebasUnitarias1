@@ -6,11 +6,11 @@ public class Clientes {
     String direccion;
     float saldoTotal;
 
-    public Clientes(int id, String nombre, String direccion, float saldo){
-        idCliente = id;
+    public Clientes(int idCliente, String nombre, String direccion, float saldoTotal){
+        this.idCliente = idCliente;
         this.nombre = nombre;
         this.direccion = direccion;
-        saldoTotal = saldo;
+        this.saldoTotal = saldoTotal;
     }
 
 

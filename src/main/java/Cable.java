@@ -11,7 +11,29 @@ public class Cable extends Clientes{
         this.idCable = idCable;
         this.saldoCable = saldoCable;
     }
+    
+    public int canales(){
+        
+        if(idCable > 50 && idCable < 70){
+            if(idCable == 50){
+                return idCable*10;
+            }
+            if(idCable == 60){
+                return idCable*10;
+            }
+            if(idCable == 70){
+                return idCable*10;
+            }
+        }
+        
+        return 0;
+    }
+    
+    public void definicion(){
+        
+    }
 
+    /*
     public float agregarDeudaCable(){
         float saldoADeber;
         Scanner sc = new Scanner(System.in);
@@ -26,6 +48,7 @@ public class Cable extends Clientes{
             return saldoADeber;
         }
     }
+    */
 
     public int getIdCable() {
         return idCable;
