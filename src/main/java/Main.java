@@ -14,8 +14,9 @@ public class Main {
                 + "1. Saldo con iva en internet\n"
                 + "2. Paquete de internet\n"
                 + "3. Cable\n"
-                + "4. Telefono: \n"
-                + "5. Ver datos disponibles: \n");
+                + "4. Telefono \n"
+                + "5. Ver datos disponibles\n"
+                + "6. Agregar canales HD de TV:");
         servicio = sc.nextInt();
 
         switch(servicio){
@@ -48,6 +49,15 @@ public class Main {
                 Telefono s4 = new Telefono(1,"Juan","San pedro",0, 81515451, 0);
                 s4.datosConsumidos(5000,4000);
                 break;
+            case 6:
+                System.out.println("Ingrese el numero de canales que tiene su paquete (50-60-70)");
+                paquete = sc.nextInt();
+                Cable s5 = new Cable(1,"Juan","San Pedro",0,paquete,0);
+
+                int canalesHD;
+                System.out.println("Ingresar el numero de canales que deseas en HD: ");
+                canalesHD = sc.nextInt();
+                s5.definicion(canalesHD);
         }
 
         //Crear un cliente

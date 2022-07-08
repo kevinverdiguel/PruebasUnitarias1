@@ -14,7 +14,7 @@ public class Cable extends Clientes{
     
     public int canales(){
         
-        if(idCable > 50 && idCable < 70){
+        if(idCable >= 50 && idCable <= 70){
             if(idCable == 50){
                 return idCable*10;
             }
@@ -29,10 +29,21 @@ public class Cable extends Clientes{
         return 0;
     }
     
-    public void definicion(){
+    public float definicion(int CanalesHD){
         Scanner sc = new Scanner(System.in);
-        int costoPorCanalHD = 5;
-        System.out.println("Ingresar datos que desea consumir este mes: ");
+        int costoPorCanalHD = 15;
+        int canalesHD = CanalesHD;
+
+        if(idCable >= canalesHD){
+            int costoPorHD = canalesHD * costoPorCanalHD;
+            System.out.println("El costo por tener canales HD es de: $" + costoPorHD);
+            saldoCable += costoPorHD;
+            return saldoCable;
+        }
+        else if(idCable < canalesHD){
+            System.out.println("Cantidad de canales deseados muy alta. Intente nuevamente.");
+        }
+        return 0;
     }
 
     /*
