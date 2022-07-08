@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Clientes {
     int idCliente;
     String nombre;
@@ -11,10 +13,6 @@ public class Clientes {
         saldoTotal = saldo;
     }
 
-    /*
-    public void modificarDatos(){ 
-    } 
-    */
 
     public int getIdCliente() {
         return idCliente;

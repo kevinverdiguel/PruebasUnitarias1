@@ -1,30 +1,45 @@
+import java.util.Scanner;
+
 public class Cable extends Clientes{
-    int numTelefono;
-    float saldoTelefono;
+    int idCable;
+    float saldoCable;
     
     public Cable(int idCliente, String nombre, String direccion, 
-            float saldoTotal, int numeroTelefono, float saldoTelefono){
+            float saldoTotal, int idCable, float saldoCable){
        
         super(idCliente, nombre, direccion, saldoTotal);
-        this.numTelefono = numeroTelefono;
-        this.saldoTelefono = saldoTelefono;
+        this.idCable = idCable;
+        this.saldoCable = saldoCable;
     }
 
-    public int getNumTelefono() {
-        return numTelefono;
+    public float agregarDeudaCable(){
+        float saldoADeber;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad que el usuario debe :\n$");
+        saldoADeber = sc.nextFloat();
+        if(saldoADeber <=0){
+            System.out.println("Introduzca una cantidad mayor a 0");
+            return 0;
+        }
+        else{
+            System.out.println("Cantidad de $" + saldoADeber + " a pagar.");
+            return saldoADeber;
+        }
     }
 
-    public void setNumTelefono(int numTelefono) {
-        this.numTelefono = numTelefono;
+    public int getIdCable() {
+        return idCable;
     }
 
-    public float getSaldoTelefono() {
-        return saldoTelefono;
+    public void setIdCable(int idCable) {
+        this.idCable = idCable;
     }
 
-    public void setSaldoTelefono(float saldoTelefono) {
-        this.saldoTelefono = saldoTelefono;
+    public float getSaldoCable() {
+        return saldoCable;
     }
-    
-    
+
+    public void setSaldoCable(float saldoCable) {
+        this.saldoCable = saldoCable;
+    }
 }
