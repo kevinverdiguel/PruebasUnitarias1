@@ -56,9 +56,6 @@ public class Telefono extends Clientes {
         }
     }
 
-
-    
-
     public long getNumTelefono() {
         return numTelefono;
     }
